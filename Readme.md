@@ -5,6 +5,9 @@
 * [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
 <!-- default file list end -->
 # How to create ASPxGridView after the page has been loaded
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e2972/)**
+<!-- run online end -->
 
 
 <p>Suppose that we have two ASPxGridView's with  huge data to display in its rows. Data binding takes several seconds (in this example it is emulated with the Thread.Sleep() function in the DataBinding event handler). The example demonstrates how to get a page without grids so it is loaded fast and then immediately bind grids to their datasources at runtime. </p><p>See also<br />
