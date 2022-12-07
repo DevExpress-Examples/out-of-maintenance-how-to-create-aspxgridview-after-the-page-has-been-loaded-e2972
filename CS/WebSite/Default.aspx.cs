@@ -1,5 +1,5 @@
 using System;
-using DevExpress.Web.ASPxGridView;
+using DevExpress.Web;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -11,14 +11,14 @@ public partial class _Default : System.Web.UI.Page
 		//This emulates long-time data binding		
 		System.Threading.Thread.Sleep(3000);
 	}
-	protected void panel1_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e) {
+	protected void panel1_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e) {
 		gridCategories.Visible = true;
 		gridCategories.DataBind();
 	}
-	protected void panel2_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e) {
+	protected void panel2_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e) {
 		gridProducts.Visible = true;
 	}
-	protected void gridProducts_CustomCallback(object sender, DevExpress.Web.ASPxGridView.ASPxGridViewCustomCallbackEventArgs e) {
+	protected void gridProducts_CustomCallback(object sender, DevExpress.Web.ASPxGridViewCustomCallbackEventArgs e) {
 		gridProducts.DataBind();
 	}
 	protected void grid2_DataBinding(object sender, EventArgs e) {

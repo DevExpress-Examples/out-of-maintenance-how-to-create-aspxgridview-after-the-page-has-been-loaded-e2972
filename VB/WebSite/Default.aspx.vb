@@ -1,6 +1,6 @@
 Imports Microsoft.VisualBasic
 Imports System
-Imports DevExpress.Web.ASPxGridView
+Imports DevExpress.Web
 
 Partial Public Class _Default
 	Inherits System.Web.UI.Page
@@ -13,14 +13,14 @@ Partial Public Class _Default
 		'This emulates long-time data binding		
 		System.Threading.Thread.Sleep(3000)
 	End Sub
-	Protected Sub panel1_Callback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxClasses.CallbackEventArgsBase)
+	Protected Sub panel1_Callback(ByVal sender As Object, ByVal e As DevExpress.Web.CallbackEventArgsBase)
 		gridCategories.Visible = True
 		gridCategories.DataBind()
 	End Sub
-	Protected Sub panel2_Callback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxClasses.CallbackEventArgsBase)
+	Protected Sub panel2_Callback(ByVal sender As Object, ByVal e As DevExpress.Web.CallbackEventArgsBase)
 		gridProducts.Visible = True
 	End Sub
-	Protected Sub gridProducts_CustomCallback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridView.ASPxGridViewCustomCallbackEventArgs)
+	Protected Sub gridProducts_CustomCallback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxGridViewCustomCallbackEventArgs)
 		gridProducts.DataBind()
 	End Sub
 	Protected Sub grid2_DataBinding(ByVal sender As Object, ByVal e As EventArgs)
